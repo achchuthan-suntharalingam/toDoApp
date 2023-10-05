@@ -58,25 +58,34 @@ const ToDo = () => {
   return (
     <div>
         <div className="container">
-            <h1>Tasks</h1>
+            <p className='heading'>Tasks</p>
+
                 <ul className="list-group">
+
                     {currentTasks.map((todo, index) => (
                     <li key={index} className="list-group-item">
+
                         <div className="d-flex justify-content-between align-items-center">
                             <div className="todo-text">{todo.todo}</div>
+
                             <div className="d-flex flex-column align-items-end">
                                 <div className={`status badge ${todo.completed === true ? 'Done' : 'InProcess'}`}>
                                     <p className='label'>{todo.completed ? 'Done' : 'InProcess'}</p>
                                 </div>
+
                                 {!todo.completed && (
-                                    <button className="btn btn-success" onClick={() => handleMarkAsDone(todo.id)}>Mark as done</button>
+                                    <button className="btn" onClick={() => handleMarkAsDone(todo.id)}>Mark as done</button>
                                     )}
+
                                 <div className="created-date">{formatDate(todo.createdAt)}</div>
                             </div>
                         </div>
+
                     </li>
                     ))}
+
                 </ul>
+
                 <div className="pagination-container">
                     <Pagination
                         activePage={currentPage}

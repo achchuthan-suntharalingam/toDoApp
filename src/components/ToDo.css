@@ -6,55 +6,54 @@
     height: 632px;
     left: 296px;
     top: 248px;
-    background-color:burlywood;
-}
-
-.list-group{
-    width: 656px;
-    height: 48px;
-    top: 297px;
-    left: 296px;  
+    padding: 20px;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
 }
 
 .list-group-item {
-    position:sticky;
-    margin-top: 5px;
-    width: 656px;
-    height: 48px;
-    left: 296px;
-    top: 297px;
+    width: 100%;
+    height:65px; 
+    padding: 10px;
+    display: flex;
+    border-style: none;
+    border-bottom-style: solid;
 }
 
 .todo-text {
-    width: 303px;
-    left: 44px;
+    flex-grow: 1;
+    position: absolute;
+    width: 450px;
     top: 25%;
     bottom: 25%;
-    flex: 1;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
     display: flex;
     align-items: center;
+    text-align:justify;
     color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.status {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 2px 8px;
-    gap: 6px;
-    position: absolute;
-    width: 47px;
-    height: 26px;
-    left: 540px;
-    top: 11px;
-    border-radius: 16px;
+.heading{
+    width: 45px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
+
+
 .label.Done{
     width: 31px;
     height: 22px;
@@ -77,26 +76,80 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 22px;
-    text-align: center;
+    /* text-align: center; */
     color: #F2C94C;
     flex: none;
     order: 1;
-    flex-grow: 0;
+    flex-grow: 0;   
 }
 
 .status.Done {
-    background-color: #E8F5E9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    gap: 6px;
+    position: absolute;
+    width: 47px;
+    height: 26px;
+    left: 500px;
+    top: 20px;
+    background: #E8F5E9;
+    border-radius: 16px;
+    color: #58975B;
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 
 .status.InProcess {
-background-color: #ffc107;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    gap: 6px;
+    position: absolute;
+    width: 83px;
+    height: 26px;
+    left: 480px;
+    top: 20px;   
+    color: #F2C94C;
+    background-color: rgba(242, 201, 76, 0.1);
+    border-radius: 16px;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px;
+    gap: 8px;
+    position: absolute;
+    width: 78px;
+    height: 30px;
+    left:10px;
+    top: 40px;
+    border-radius: 24px;
+    width: 78px;
+    height: 22px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    color: #BC006D;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top: 5px;
+    padding-bottom: 15px;
 }
 
 .created-date {
-    /* position: absolute; */
+    position: absolute;
     left: 91.62%;
     right: 2.44%;
     top: 27.08%;
@@ -113,10 +166,10 @@ background-color: #ffc107;
 }
 
 .pagination-container{
-    position: absolute;
+    display: flex;
     text-align: center;
     width: 208px;
-    height: 32px;
+    height:10px;
     left: 520px;
     top: 824px;
 }
@@ -141,9 +194,10 @@ background-color: #ffc107;
 }
 
 /* Style the active page number */
-.pagination-container .pagination .active a {
-  background-color: #ff0000;
-  color: #fff;
+.pagination-container .pagination .active a {  
+  color:red;
+  background-color: #fff;
+  border-color: red;
 }
 
 /* hover effect for page numbers */
