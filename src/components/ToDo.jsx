@@ -2,6 +2,9 @@ import React , {useEffect, useState} from 'react'
 import axios from 'axios'
 import './ToDo.css'
 import Pagination from 'react-js-pagination';
+import { Pie } from 'react-chartjs-2';
+import {Chart, ArcElement} from 'chart.js'
+Chart.register(ArcElement);
 
 
 function formatDate(createdAt) {
@@ -20,6 +23,23 @@ const ToDo = () => {
 
     const[list, setList] = useState([]);
 
+    const taskCountsByPriority = {
+        HIGH: list.filter((item) => item.priority === 'HIGH').length,
+        MEDIUM: list.filter((item) => item.priority === 'MEDIUM').length,
+        LOW: list.filter((item) => item.priority === 'LOW').length,
+      };
+    
+      // Create data for the Pie chart
+      const pieChartData = {
+        labels: ['HIGH', 'MEDIUM', 'LOW'],
+        datasets: [
+          {
+            data: [taskCountsByPriority.HIGH, taskCountsByPriority.MEDIUM, taskCountsByPriority.LOW],
+            backgroundColor: ['red', 'yellow', 'blue'],
+          },
+        ],
+      };
+
     // status change button
     const handleMarkAsDone = (id) => {
         const index = list.findIndex((list) => list.id === id);    
@@ -34,7 +54,7 @@ const ToDo = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [tasksPerPage] = useState(8);
 
-      // Paginate tasks
+    // Paginate tasks
     const indexOfLastTask = currentPage * tasksPerPage;
     const indexOfFirstTask = indexOfLastTask - tasksPerPage;
     const currentTasks = list.slice(indexOfFirstTask, indexOfLastTask);
@@ -61,7 +81,7 @@ const ToDo = () => {
         getList();
     },[]);
 
-  return (
+return (
     <div>
         <div className="container">
             <p className='heading'>Tasks</p>
@@ -88,6 +108,7 @@ const ToDo = () => {
 
                                 <div className="created-date">{formatDate(todo.createdAt)}</div>
                             </div>
+
                         </div>
 
                     </li>
@@ -108,6 +129,19 @@ const ToDo = () => {
                     />
                 </div>
         </div>
+        <div className="chart-container">
+            <div className="container-header">
+                <p id="chartheading">Task Priorities</p>
+            </div>
+            <div className="group1768">
+                <div className="pie-chart">
+                    <Pie data={pieChartData} />
+                </div>
+            </div>
+        </div>
+
+
+        
     </div>
       
   )
