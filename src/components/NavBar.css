@@ -1,0 +1,126 @@
+/* Style the navigation bar */
+.navbar {
+    position: absolute;
+    width: 1168px;
+    height: 80px;
+    left: 272px;
+    top: 0px;
+    background: #FFFFFF;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  /* Current/active navbar link */
+  .heading3 {
+    width: 103px;
+    height: 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+.frame72{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 103px;
+    height: 32px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.frame73{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 103px;
+    height: 32px;
+    left: 24px;
+    top: 24px;
+}
+
+.frame68{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    left: 91.78%;
+    right: 2.05%;
+    top: 25%;
+    bottom: 25%;
+}
+
+.avatar{
+    width: 40px;
+height: 40px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.dropdown{
+    width: 24px;
+    height: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    position: absolute;
+    left: 105%;
+    right: 25%;
+    top: 20%;
+    bottom: 37.5%;
+}
+
+.dbell-off{
+    position: absolute;
+    left: 87.67%;
+    right: 10.27%;
+    top: 35%;
+    bottom: 35%;
+}
+
+.dbell{
+    position: absolute;
+    left: 14.73%;
+    right: 14.74%;
+    top: 8.33%;
+    bottom: 8.33%;
+    border: 2px solid #757575;
+}

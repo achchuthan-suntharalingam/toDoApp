@@ -9,7 +9,7 @@ function SideBar() {
             <div class="panel-body">
                 <div className="frame61">
                     <div className="frame56">
-                        <div className="frame55"><span className="dashboard"><img id="dashboardicon" src="" alt=""></img></span><p id="dashboardtext">Dashboard</p></div>                        
+                        <div className="frame55"><span className="dashboard"><img id="dashboardicon" src="/icons/dashboard.png" alt="dashboardicon"></img></span><p id="dashboardtext">Dashboard</p></div>                        
                     </div>
                 </div>
             </div>
