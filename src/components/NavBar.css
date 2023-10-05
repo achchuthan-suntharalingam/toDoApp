@@ -124,3 +124,123 @@ flex-grow: 0;
     bottom: 8.33%;
     border: 2px solid #757575;
 }
+
+
+/* header */
+.frame1743{
+  position: absolute;
+  width: 1120px;
+  height: 120px;
+  left: 296px;
+  top: 104px;
+  background: #FFFFFF;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+}
+
+#welcome{
+  position: absolute;
+  width: 282px;
+  height: 32px;
+  top: 18px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+#welcomenote{
+  position: absolute;
+  width: 849px;
+  height: 48px;
+  left: 16px;
+  top: 54px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #757575;
+  text-align: justify;
+}
+#link{
+  color: red;
+}
+
+.group1770{
+  
+  width: 167px;
+  height: 179px;
+  left: 889px;
+  top: -30px;
+}
+
+#ellipse1{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 71px;
+  left: 994px;
+  opacity: 0.2px;
+  color: #33074F;  
+}
+
+#ellipse2{
+  position: absolute;
+  color: #BC006D;
+  width: 20px;
+  height: 20px;
+  top: 26px;
+  left: 889px;
+  opacity: 0.2px;
+}
+
+#ellipse3{
+  position: absolute;
+  color: #BC006D;
+  width: 30px;
+  height: 30px;
+  top: 39px;
+  left: 1026px;
+  opacity: 0.2px;
+}
+
+#ellipse4{
+  position: absolute;
+  color: #BC006D;
+  width: 66px;
+  height: 40px;
+  top: 79px;
+  left: 895px;
+  opacity: 0.2px;
+}
+  
+
+#ellipse5{
+  position: absolute;
+  color: #33074F;
+  width: 70px;
+  height: 45px;
+  top: -0px;
+  left: 956px;
+  opacity: 0.2px;
+}
+
+.close{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 1080px;
+  top: 10px;
+}
+
+#closeicon{
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border: 2px solid #757575;
+}
