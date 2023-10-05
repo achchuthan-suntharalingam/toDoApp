@@ -10,8 +10,7 @@ function App() {
       <ToDo/>
       <SideBar/>
       <NavBar/>
-      <ActivityFeed/>
-      
+      <ActivityFeed/>      
     </div>
   );
 }

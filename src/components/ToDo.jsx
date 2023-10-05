@@ -10,6 +10,12 @@ function formatDate(createdAt) {
     return date.toLocaleDateString('en-GB',options);
   }
 
+  const priorityColors = {
+    "HIGH": 'red',
+    "MEDIUM": 'yellow',
+    "LOW": 'blue',
+  };
+  
 const ToDo = () => {
 
     const[list, setList] = useState([]);
@@ -66,6 +72,9 @@ const ToDo = () => {
                     <li key={index} className="list-group-item">
 
                         <div className="d-flex justify-content-between align-items-center">
+                            <div className='group1737' >
+                                <img id="bell" src="/icons/bell.png" alt="bell" style={{backgroundColor: priorityColors[todo.priority]}}></img>
+                            </div>
                             <div className="todo-text">{todo.todo}</div>
 
                             <div className="d-flex flex-column align-items-end">
