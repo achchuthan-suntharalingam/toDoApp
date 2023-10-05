@@ -86,7 +86,7 @@ const ToDo = () => {
 
                 </ul>
 
-                <div className="pagination-container">
+                <div className="pagination">
                     <Pagination
                         activePage={currentPage}
                         itemsCountPerPage={tasksPerPage}

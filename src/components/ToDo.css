@@ -165,17 +165,13 @@
     color: #757575;
 }
 
-.pagination-container{
-    display: flex;
-    text-align: center;
-    width: 208px;
-    height:10px;
-    left: 520px;
-    top: 824px;
+.pagination{
+    margin-left: 80px;
+    margin-top: 2px;
 }
 
-.pagination-container .pagination li:first-child a,
-.pagination-container .pagination li:last-child a {
+.pagination .pagination li:first-child a,
+.pagination .pagination li:last-child a {
   background-color: #f0f0f0; 
   color: #333;
   padding: 8px 12px;
@@ -184,7 +180,7 @@
 }
 
 /* Style the page numbers */
-.pagination-container .pagination li a {
+.pagination .pagination li a {
   background-color: #fff;
   color: #333;
   padding: 8px 12px;
@@ -194,7 +190,7 @@
 }
 
 /* Style the active page number */
-.pagination-container .pagination .active a {  
+.pagination .pagination .active a {  
   color:red;
   background-color: #fff;
   border-color: red;
