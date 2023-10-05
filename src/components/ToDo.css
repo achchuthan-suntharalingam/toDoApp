@@ -253,12 +253,55 @@ border-radius: 8px;
     font-weight: 600;
 }
 
-.pie-chart{
-    width: 148px;
+.group1769{
+    width: 249.5px;
     height: 148px;
-    left: 2071px;
+    left: 1071px;
     top: 708px;
-    margin-left: 50px; 
+    margin-left: 100px;
     margin-top: 50px;
 }
 
+.group1768{
+    width: 148px;
+    height: 148px;
+    left: 1071px;
+    top: 708px;
+}
+
+.pie-chart{
+    width: 148px;
+    height: 148px;
+    left: 1071px;
+    top: 708px;
+}
+
+.legend{
+    margin-left: 150px;
+    margin-top: -90px;
+}
+
+.legendhigh{
+    color:red;
+    display: flex;
+    line-height: 0.1em;
+}
+.legendhigh span{
+    color: #000000;
+}  
+.legendmedium{
+    color:yellow;
+    display: flex;
+    line-height: 0.1em;
+}
+.legendmedium span{
+    color: #000000;
+} 
+.legendlow{
+    color:blue;
+    display: flex;
+    line-height: 0.1em;
+}
+.legendlow span{
+    color: #000000;
+}  

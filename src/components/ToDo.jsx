@@ -2,7 +2,7 @@ import React , {useEffect, useState} from 'react'
 import axios from 'axios'
 import './ToDo.css'
 import Pagination from 'react-js-pagination';
-import { Pie } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import {Chart, ArcElement} from 'chart.js'
 Chart.register(ArcElement);
 
@@ -133,12 +133,26 @@ return (
             <div className="container-header">
                 <p id="chartheading">Task Priorities</p>
             </div>
-            <div className="group1768">
-                <div className="pie-chart">
-                    <Pie data={pieChartData} />
+            <div className="group1769">
+                <div className='group1768'>
+                    <div className="pie-chart">
+                        <Doughnut data={pieChartData} />                  
+                    </div>
+                </div>
+                <div className='legend'>
+                    <ul className='legendhigh'>
+                        <li id="high"><span>High</span></li>
+                    </ul>
+                    <ul className='legendmedium'>
+                        <li id="high"><span>Medium</span></li>
+                    </ul>
+                    <ul className='legendlow'>
+                        <li id="high"><span>Low</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
+        
 
 
         
