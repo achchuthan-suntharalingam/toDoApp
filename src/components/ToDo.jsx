@@ -1,6 +1,7 @@
 import React , {useEffect, useState} from 'react'
 import axios from 'axios'
 import './ToDo.css'
+import Pagination from 'react-js-pagination';
 
 
 function formatDate(createdAt) {
@@ -13,6 +14,7 @@ const ToDo = () => {
 
     const[list, setList] = useState([]);
 
+    // status change button
     const handleMarkAsDone = (id) => {
         const index = list.findIndex((list) => list.id === id);    
         if (index !== -1) {
@@ -21,6 +23,20 @@ const ToDo = () => {
           setList(updatedList);
         }
       };
+
+    // pagination function
+    const [currentPage, setCurrentPage] = useState(1);
+    const [tasksPerPage] = useState(8);
+
+      // Paginate tasks
+    const indexOfLastTask = currentPage * tasksPerPage;
+    const indexOfFirstTask = indexOfLastTask - tasksPerPage;
+    const currentTasks = list.slice(indexOfFirstTask, indexOfLastTask);
+
+    // Handle page change
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
     
 
     useEffect(()=>{
@@ -44,13 +60,13 @@ const ToDo = () => {
         <div className="container">
             <h1>Tasks</h1>
                 <ul className="list-group">
-                    {list.map((todo, index) => (
+                    {currentTasks.map((todo, index) => (
                     <li key={index} className="list-group-item">
                         <div className="d-flex justify-content-between align-items-center">
                             <div className="todo-text">{todo.todo}</div>
                             <div className="d-flex flex-column align-items-end">
-                                <div className={`status badge ${todo.completed === true ? 'bg-success' : 'bg-warning'}`}>
-                                    {todo.completed ? 'Done' : 'In Process'}
+                                <div className={`status badge ${todo.completed === true ? 'Done' : 'InProcess'}`}>
+                                    <p className='label'>{todo.completed ? 'Done' : 'InProcess'}</p>
                                 </div>
                                 {!todo.completed && (
                                     <button className="btn btn-success" onClick={() => handleMarkAsDone(todo.id)}>Mark as done</button>
@@ -61,6 +77,18 @@ const ToDo = () => {
                     </li>
                     ))}
                 </ul>
+                <div className="pagination-container">
+                    <Pagination
+                        activePage={currentPage}
+                        itemsCountPerPage={tasksPerPage}
+                        totalItemsCount={list.length}
+                        pageRangeDisplayed={3}
+                        onChange={handlePageChange}
+                        itemClass="page-item"
+                        linkClass="page-link"
+                        activeClass="active"
+                    />
+                </div>
         </div>
     </div>
       

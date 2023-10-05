@@ -1,38 +1,159 @@
 /* Styling for the ToDoList component */
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .list-group-item {
-    margin-top: 10px;
-  }
-  
-  .todo-text {
+    position: absolute;
+    width: 656px;
+    height: 632px;
+    left: 296px;
+    top: 248px;
+    background-color:burlywood;
+}
+
+.list-group{
+    width: 656px;
+    height: 48px;
+    top: 297px;
+    left: 296px;  
+}
+
+.list-group-item {
+    position:sticky;
+    margin-top: 5px;
+    width: 656px;
+    height: 48px;
+    left: 296px;
+    top: 297px;
+}
+
+.todo-text {
+    width: 303px;
+    left: 44px;
+    top: 25%;
+    bottom: 25%;
     flex: 1;
-  }
-  
-  .status {
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .status.bg-success {
-    background-color: #28a745;
-  }
-  
-  .status.bg-warning {
-    background-color: #ffc107;
-  }
-  
-  .created-date {
-    font-size: 0.8rem;
-    color: #6c757d;
-  }
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    gap: 6px;
+    position: absolute;
+    width: 47px;
+    height: 26px;
+    left: 540px;
+    top: 11px;
+    border-radius: 16px;
+}
+.label.Done{
+    width: 31px;
+    height: 22px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    text-align:center;
+    color: #219653;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.label.InProcess{
+    width: 67px;
+    height: 22px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    color: #F2C94C;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.status.Done {
+    background-color: #E8F5E9;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.status.InProcess {
+background-color: #ffc107;
+}
+
+.created-date {
+    /* position: absolute; */
+    left: 91.62%;
+    right: 2.44%;
+    top: 27.08%;
+    bottom: 27.08%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #757575;
+}
+
+.pagination-container{
+    position: absolute;
+    text-align: center;
+    width: 208px;
+    height: 32px;
+    left: 520px;
+    top: 824px;
+}
+
+.pagination-container .pagination li:first-child a,
+.pagination-container .pagination li:last-child a {
+  background-color: #f0f0f0; 
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+/* Style the page numbers */
+.pagination-container .pagination li a {
+  background-color: #fff;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+/* Style the active page number */
+.pagination-container .pagination .active a {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+/* hover effect for page numbers */
+.pagination-container .pagination li a:hover {
+  background-color: #ddd;
+  color: #333;
+  cursor: pointer;
+}
+
+
   
 
 /* given styling */
