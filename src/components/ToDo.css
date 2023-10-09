@@ -31,7 +31,7 @@
     position: absolute;
     left:4px;
     top:2px;
-    height:15px;
+    height:18px;
     border-radius: 5px;
 }
 
@@ -92,7 +92,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 22px;
-    /* text-align: center; */
+    text-align: center;
     color: #F2C94C;
     flex: none;
     order: 1;
@@ -107,9 +107,9 @@
     padding: 2px 8px;
     gap: 6px;
     position: absolute;
-    width: 47px;
+    width: 75px;
     height: 26px;
-    left: 500px;
+    left: 480px;
     top: 20px;
     background: #E8F5E9;
     border-radius: 16px;
@@ -117,6 +117,7 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    padding-top: 15px;
 }
 
 .status.InProcess {
@@ -127,13 +128,14 @@
     padding: 2px 8px;
     gap: 6px;
     position: absolute;
-    width: 83px;
+    width: 75px;
     height: 26px;
     left: 480px;
     top: 20px;   
     color: #F2C94C;
     background-color: rgba(242, 201, 76, 0.1);
     border-radius: 16px;
+    padding-top: 15px;
 }
 
 .btn{

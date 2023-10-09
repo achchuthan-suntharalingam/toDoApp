@@ -4,10 +4,10 @@ import './NavBar.css'
 function NavBar() {
   return (
     <div>
-        <div class="navbar">
+        <div className="navbar">
             <div className='frame73'>
                 <div className='frame72'>
-                    <h3 class="heading3">Dashboard</h3>                    
+                    <h3 className="heading3">Dashboard</h3>                    
                 </div>
             </div>
             <div className="dbell-off"><img className="dbell" src="/icons/dbell.png" alt="avatar"></img></div>
